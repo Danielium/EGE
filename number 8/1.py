@@ -157,12 +157,20 @@
 #        c += 1
 #        print(c)
 
+# from itertools import product
+# count = 0
+# l = list(product('АКЛМНЯ', repeat = 5))
+# for i in l:
+#     i = ''.join(i)
+#     count += 1
+#     if i[:2] == 'МН':
+#         print(count)
+# print(4966 - 4753)
+
 from itertools import product
 count = 0
-l = list(product('АКЛМНЯ', repeat = 5))
+l = list(product('ABCX', repeat = 5))
 for i in l:
-    i = ''.join(i)
-    count += 1
-    if i[:2] == 'МН':
-        print(count)
-print(4966 - 4753)
+    if (i[-1] == 'X' and i.count('X') == 1) or i.count('X') == 0:
+        count += 1
+print(count)

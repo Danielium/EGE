@@ -160,19 +160,51 @@
 # exitonclick()
 
 
+# from turtle import *
+# tracer(0)
+# screensize(10000, 10000)
+# m = 20
+# for i in range(100):
+#     fd(10 * m)
+#     rt(180)
+#     fd(10 * m)
+#     rt(190)
+# up()
+# for x in range(-50, 50):
+#     for y in range(-50, 70):
+#         goto(x*m, y*m)
+#         dot(3, 'blue')
+# update()
+# exitonclick()
+
+
+
 from turtle import *
 tracer(0)
 screensize(10000, 10000)
-m = 20
-for i in range(100):
-    fd(10 * m)
-    rt(180)
-    fd(10 * m)
-    rt(190)
+m = 30
+for i in range(2):
+    fd(13*m)
+    rt(90)
+    fd(20*m)
+    rt(90)
+up()
+fd(8*m)
+rt(90)
+bk(3*m)
+left(90)
+down()
+for i in range(2):
+    fd(16*m)
+    rt(90)
+    fd(8*m)
+    rt(90)
 up()
 for x in range(-50, 50):
-    for y in range(-50, 70):
+    for y in range(-50, 50):
         goto(x*m, y*m)
-        dot(3, 'blue')
+        dot(3, 'red')
 update()
 exitonclick()
+
+print(14 * 21 + 18 + 99)

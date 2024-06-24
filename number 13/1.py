@@ -87,10 +87,18 @@
 
 
 
+# from ipaddress import *
+# count = 0
+# net = ip_network('112.154.133.208/255.255.252.0', 0)
+# for ip in net:
+#     if f'{ip:b}'[:16].count('1') <= f'{ip:b}'[16:].count('0') and f'{ip:b}'[16:].count('0') % 2 != 0:
+#         count += 1
+# print(count)
+
+
+
 from ipaddress import *
-count = 0
-net = ip_network('112.154.133.208/255.255.252.0', 0)
-for ip in net:
-    if f'{ip:b}'[:16].count('1') <= f'{ip:b}'[16:].count('0') and f'{ip:b}'[16:].count('0') % 2 != 0:
-        count += 1
-print(count)
+for m in range(33):
+    net = ip_network(f'145.192.94.230/{m}', 0)
+    if str(net.network_address) == '145.192.80.0':
+        print(net.netmask)

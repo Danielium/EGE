@@ -91,11 +91,21 @@
 # print(len(c), min(c))
 
 
-a = [int(x) for x in open('10')]
-m = max(n for n in a if abs(n) % 10 == 3)
-c = []
+# a = [int(x) for x in open('10')]
+# m = max(n for n in a if abs(n) % 10 == 3)
+# c = []
+# for i in range(len(a) - 1):
+#     if (abs(a[i]) % 10 == 3) + (abs(a[i+1]) % 10 == 3) == 1:
+#         if a[i] ** 2 + a[i+1] ** 2 >= m ** 2:
+#             c.append(a[i] ** 2 + a[i+1] ** 2)
+# print(len(c), max(c))
+
+
+a = [int(x) for x in open('1')]
+m = min(x for x in a if 100 <= x <= 999 and x % 10 == 3)
+p = []
 for i in range(len(a) - 1):
-    if (abs(a[i]) % 10 == 3) + (abs(a[i+1]) % 10 == 3) == 1:
-        if a[i] ** 2 + a[i+1] ** 2 >= m ** 2:
-            c.append(a[i] ** 2 + a[i+1] ** 2)
-print(len(c), max(c))
+    if (1000 <= a[i] <= 9999) + (1000 <= a[i+1] <= 9999) == 1:
+        if (a[i]**2 + a[i+1]**2) % m == 0:
+            p.append(a[i]**2 + a[i+1]**2)
+print(len(p), max(p))

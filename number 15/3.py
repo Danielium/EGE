@@ -26,3 +26,6 @@
 #     f = (A <= P) and ((not Q) <= (not A))
 #     if f == f_usl:
 #         print(x)
+
+
+

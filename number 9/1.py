@@ -98,14 +98,24 @@
 
 
 
+# count = 0
+# for line in open('t.txt'):
+#     a = [int(x) for x in line.split()]
+#     p = [x for x in a if a.count(x) == 1]
+#     ch = [x for x in a if x % 2 == 0]
+#     nch = [x for x in a if x % 2 == 1]
+#     if len(p) == 6:
+#         if len(ch) > len(nch):
+#             count += 1
+#
+# print(count)
+
+
 count = 0
 for line in open('t.txt'):
     a = [int(x) for x in line.split()]
-    p = [x for x in a if a.count(x) == 1]
-    ch = [x for x in a if x % 2 == 0]
-    nch = [x for x in a if x % 2 == 1]
-    if len(p) == 6:
-        if len(ch) > len(nch):
+    p = [x for x in a if a.count(x) > 1]
+    if a.count(min(a)) == 1:
+        if max(a) + min(a) < sum(p):
             count += 1
-
 print(count)

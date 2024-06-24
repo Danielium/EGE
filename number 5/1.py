@@ -53,15 +53,9 @@
 # print(max(f(N) for N in range(1, 16)))
 
 
-# def f(x):
-#     r = ''
-#     while x > 0:
-#         r += str(x % 5)
-#         x //= 5
-#     return r[::-1]
-# def fuck_obzh(N):
-#     k = f(N)
-#     if int(k[-1]) % 2 == 0: k += '2'
-#     else: k = '2' + k + '3'
-#     return int(k, 5)
-# print(max(N for N in range(1, 100000) if int(fuck_obzh(N) < 1000)))
+def f(n):
+    d = bin(n)[2:]
+    d += str(d.count('1') % 2)
+    d += str(d.count('1') % 2)
+    return int(d, 2)
+print(min(f(N) for N in range(1,  10000) if f(N) > 80))

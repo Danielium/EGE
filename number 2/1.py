@@ -189,16 +189,37 @@
 
 
 
+# from itertools import product, permutations
+# def f(w, x, y, z):
+#     return ((x <= y) == (w <= x)) and (z <= w)
+# for x1, x2, x3, x4 in product([0,1], repeat = 4):
+#     t = (
+#         (1, 0, 0, 1, 1),
+#         (1, x1, x2, 0, 1),
+#         (x3, 0, 1, x4, 1)
+#     )
+#     if len(t) == len(set(t)):
+#         for p in permutations('wxyz', r = 4):
+#             if all(f(**dict(zip(p, l))) == l[-1] for l in t):
+#                 print(*p)
+
+
+
+
+
+
 from itertools import product, permutations
-def f(w, x, y, z):
-    return ((x <= y) == (w <= x)) and (z <= w)
-for x1, x2, x3, x4 in product([0,1], repeat = 4):
-    t = (
-        (1, 0, 0, 1, 1),
-        (1, x1, x2, 0, 1),
-        (x3, 0, 1, x4, 1)
-    )
-    if len(t) == len(set(t)):
-        for p in permutations('wxyz', r = 4):
-            if all(f(**dict(zip(p, l))) == l[-1] for l in t):
-                print(*p)
+def f1(x, y, w, z):
+    return (w <= y) == (x and z)
+def f2(x, y, w, z):
+    return (not x) or (not y) or (not z) or w
+def f3(x, y, w, z):
+    return (z or w) and y and x
+t = (
+    (1, 0, 1, 0, 1),
+    (0, 1, 1, 1, 0),
+    (1, 1, 1, 0, 1)
+)
+for p in permutations('xywz', r=4):
+    if f1(**dict(zip(p, t[0]))) == t[0][-1] and f2(**dict(zip(p, t[1]))) == t[1][-1] and f3(**dict(zip(p, t[2]))) == t[2][-1]:
+        print(*p)
