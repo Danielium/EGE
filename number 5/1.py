@@ -53,9 +53,25 @@
 # print(max(f(N) for N in range(1, 16)))
 
 
+# def f(n):
+#     d = bin(n)[2:]
+#     d += str(d.count('1') % 2)
+#     d += str(d.count('1') % 2)
+#     return int(d, 2)
+# print(min(f(N) for N in range(1,  10000) if f(N) > 80))
+
+
+# def f(n):
+#     b = bin(n)[2:]
+#     b += str(b.count('1') % 2)
+#     b += str(b.count('1') % 2)
+#     return int(b, 2)
+# print(min (f(n) for n in range (1, 1000) if f(n) > 75))
+
+
 def f(n):
-    d = bin(n)[2:]
-    d += str(d.count('1') % 2)
-    d += str(d.count('1') % 2)
-    return int(d, 2)
-print(min(f(N) for N in range(1,  10000) if f(N) > 80))
+    b = bin(n)[2:]
+    if b[-1] == '0': b = '10' + bin(n)[2:] + '10'
+    else: b = '1' + bin(n)[2:] + '00'
+    return int(b, 2)
+print(min(f(n) for n in range(1, 100) if f(n) > 100))

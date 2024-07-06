@@ -105,12 +105,21 @@
 #     if f != f_usl:
 #         print(x)
 
-A = 0
-f_usl = 1
-for x in [k * 0.25 for k in range(-10000, 10000)]:
-    P = 25 <= x <= 240
-    Q = 175 <= x <= 300
-    R = 270 <= x <= 340
-    f = (Q <= P) or ((not A) <= R)
-    if f != f_usl:
-        print(x)
+# A = 0
+# f_usl = 1
+# for x in [k * 0.25 for k in range(-10000, 10000)]:
+#     P = 25 <= x <= 240
+#     Q = 175 <= x <= 300
+#     R = 270 <= x <= 340
+#     f = (Q <= P) or ((not A) <= R)
+#     if f != f_usl:
+#         print(x)
+
+# A = 0
+# f_usl = 1
+# for x in [k * 0.25 for k in range(-10000, 10000)]:
+#     P = 254 <= x <= 800
+#     Q = 410 <= x <= 823
+#     f = (P and (not A)) <= Q
+#     if f != f_usl:
+#         print(x)

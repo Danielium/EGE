@@ -97,8 +97,17 @@
 
 
 
+# from ipaddress import *
+# for m in range(33):
+#     net = ip_network(f'145.192.94.230/{m}', 0)
+#     if str(net.network_address) == '145.192.80.0':
+#         print(net.netmask)
+
+
 from ipaddress import *
-for m in range(33):
-    net = ip_network(f'145.192.94.230/{m}', 0)
-    if str(net.network_address) == '145.192.80.0':
-        print(net.netmask)
+count = 0
+net = ip_network('192.168.240.0/255.255.255.0', 0)
+for ip in net:
+    if f'{ip:b}'.count('1') == f'{ip:b}'.count('0'):
+        count += 1
+print(count)

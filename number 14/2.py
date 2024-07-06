@@ -25,3 +25,10 @@
 #     x5 = int(f'7{x}79', 17)
 #     if (x1 + x2 + x3 + x4 + x5) % 16 == 0:
 #         print(x, (x1 + x2 + x3 + x4 + x5) / 16)
+
+count = 0
+for x in '0123456789abcde':
+    x1 = int(f'97968{x}13', 15)
+    x2 = int(f'7{x}213', 15)
+    if (x1 + x2) % 11 == 0: count += int(x, 15)
+print(count)

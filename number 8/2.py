@@ -130,3 +130,24 @@
 #         count += 1
 # print(count)
 
+# from itertools import permutations
+# count = 0
+# a = list(permutations('0123456789abcdef', r=5))
+# b = list(permutations('02468ace', r=2)) + list(permutations('13579bdf', r=2))
+# for x in a:
+#     if all(''.join(s) not in ''.join(x) for s in b) and x[0] != '0':
+#         count += 1
+# print(count)
+# print(697 - 398)
+
+from itertools import permutations, product
+count = 0
+a = list(permutations('0123456789abcdef', r = 3))
+f = list(product('02468ace', repeat = 2)) + list(product('13579bdf', repeat = 2))
+for x in a:
+    if all(''.join(s) not in ''.join(x) for s in f) and x[0] != '0':
+        count += 1
+print(count)
+
+
+

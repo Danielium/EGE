@@ -89,10 +89,19 @@
 # print(f(42))
 
 
+# def f(n):
+#     if n < 50: return n
+#     if n > 49: return 2 * g(50 - n//2)
+# def g(n):
+#     if n > 40: return 10
+#     if n < 41: return 30 + f(n + 600//n)
+# print(f(80))
+
+from functools import lru_cache
+@lru_cache(None)
 def f(n):
-    if n < 50: return n
-    if n > 49: return 2 * g(50 - n//2)
-def g(n):
-    if n > 40: return 10
-    if n < 41: return 30 + f(n + 600//n)
-print(f(80))
+    if n == 1: return 1
+    if n > 1: return n * f(n - 1)
+for i in range(1, 2100):
+    f(i)
+print((f(2023) - f(2022)) / f (2020))

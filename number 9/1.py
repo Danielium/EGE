@@ -111,11 +111,27 @@
 # print(count)
 
 
+# count = 0
+# for line in open('t.txt'):
+#     a = [int(x) for x in line.split()]
+#     p = [x for x in a if a.count(x) > 1]
+#     if a.count(min(a)) == 1:
+#         if max(a) + min(a) < sum(p):
+#             count += 1
+# print(count)
+
 count = 0
 for line in open('t.txt'):
     a = [int(x) for x in line.split()]
-    p = [x for x in a if a.count(x) > 1]
-    if a.count(min(a)) == 1:
-        if max(a) + min(a) < sum(p):
+    p = []
+    np = []
+    for x in a:
+        if a.count(x) == 2: p.append(x)
+        if a.count(x) == 1: np.append(x)
+    if len(p) == 4:
+        p = list(set(p))
+        print(p, np)
+        if (np[0] > p[0] and np[0] < p[1]) or (np[0] < p[0] and np[0] > p[1]):
             count += 1
 print(count)
+
