@@ -167,10 +167,21 @@
 #         print(count)
 # print(4966 - 4753)
 
+# from itertools import product
+# count = 0
+# l = list(product('ABCX', repeat = 5))
+# for i in l:
+#     if (i[-1] == 'X' and i.count('X') == 1) or i.count('X') == 0:
+#         count += 1
+# print(count)
+
+
+
 from itertools import product
 count = 0
-l = list(product('ABCX', repeat = 5))
+l = list(product(sorted('ЛАЙМ'), repeat = 5))
 for i in l:
-    if (i[-1] == 'X' and i.count('X') == 1) or i.count('X') == 0:
-        count += 1
-print(count)
+    count += 1
+    s = ''.join(i)
+    if s.count('Л') == 0 and s.count('М') == 0 and 'ЙЙ' not in s:
+        print(i, count)

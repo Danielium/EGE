@@ -148,5 +148,30 @@
 
 
 
+# from fnmatch import fnmatch
+# def f(x):
+#     c = set()
+#     for d in range(1, int(x ** 0.5) + 1):
+#         if x % d == 0:
+#             c.add(d)
+#             c.add(x // d)
+#     return c
+# for x in range(18, 10 ** 9, 18):
+#     if fnmatch(str(x), '*18??18'):
+#         if x % 1018 == 0:
+#             print(x, len(f(x)))
 
 
+
+
+def f(x):
+    c = set()
+    for d in range(1, int(x ** 0.5) + 1):
+        if x % d == 0:
+            c.add(d)
+            c.add(x // d)
+    return c
+for x in range(700001, 701000):
+    k = [a for a in f(x) if a % 10 == 7 and a != x and a != 7]
+    if len(k) > 0:
+        print(x, min(k))

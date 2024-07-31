@@ -104,10 +104,20 @@
 #         print(net.netmask)
 
 
+# from ipaddress import *
+# count = 0
+# net = ip_network('192.168.240.0/255.255.255.0', 0)
+# for ip in net:
+#     if f'{ip:b}'.count('1') == f'{ip:b}'.count('0'):
+#         count += 1
+# print(count)
+
+
+
 from ipaddress import *
 count = 0
-net = ip_network('192.168.240.0/255.255.255.0', 0)
+net = ip_network('115.192.0.0/255.192.0.0', 0)
 for ip in net:
-    if f'{ip:b}'.count('1') == f'{ip:b}'.count('0'):
+    if f'{ip:b}'.count('1') % 3 != 0:
         count += 1
 print(count)

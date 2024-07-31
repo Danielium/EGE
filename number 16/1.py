@@ -97,11 +97,18 @@
 #     if n < 41: return 30 + f(n + 600//n)
 # print(f(80))
 
-from functools import lru_cache
-@lru_cache(None)
+# from functools import lru_cache
+# @lru_cache(None)
+# def f(n):
+#     if n == 1: return 1
+#     if n > 1: return n * f(n - 1)
+# for i in range(1, 2100):
+#     f(i)
+# print((f(2023) - f(2022)) / f (2020))
+
+from sys import *
+setrecursionlimit(2024)
 def f(n):
     if n == 1: return 1
-    if n > 1: return n * f(n - 1)
-for i in range(1, 2100):
-    f(i)
-print((f(2023) - f(2022)) / f (2020))
+    return (n-1)*f(n-1)
+print(( f(2024)//7 - f(2023) ) // f(2022) )

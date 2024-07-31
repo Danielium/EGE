@@ -69,9 +69,21 @@
 # print(min (f(n) for n in range (1, 1000) if f(n) > 75))
 
 
-def f(n):
+# def f(n):
+#     b = bin(n)[2:]
+#     if b[-1] == '0': b = '10' + bin(n)[2:] + '10'
+#     else: b = '1' + bin(n)[2:] + '00'
+#     return int(b, 2)
+# print(min(f(n) for n in range(1, 100) if f(n) > 100))
+
+
+
+
+for n in range(28, 200):
     b = bin(n)[2:]
-    if b[-1] == '0': b = '10' + bin(n)[2:] + '10'
-    else: b = '1' + bin(n)[2:] + '00'
-    return int(b, 2)
-print(min(f(n) for n in range(1, 100) if f(n) > 100))
+    if b.count('1') % 2 == 0:
+        b = '10' + b[2:] + '0'
+    else:
+        b = '11' + b[2:] + '1'
+    r = int(b, 2)
+    print(n, r)
