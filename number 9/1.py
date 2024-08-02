@@ -136,6 +136,38 @@
 # print(count)
 
 
+# count = 0
+# for line in open('t.txt'):
+#     a = [int(x) for x in line.split()]
+#     np = [x for x in a if a.count(x) == 1]
+#     p = [x for x in a if a.count(x) == 3]
+#     if len(set(p)) == 1 and len(set(np)) == 3:
+#         if sum(p) ** 2 > sum(np) ** 2:
+#             count += 1
+# print(count)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+count = 0
 for line in open('t.txt'):
-    a = [int(x) for x in line.split()]
+    a = sorted([int(x) for x in line.split()])
+    p = [x for x in a if a.count(x) == 2]
+    if a[3] < a[0]+a[1]+a[2] and len(p) == 2:
+        count += 1
+print(count)

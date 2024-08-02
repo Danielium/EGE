@@ -23,3 +23,8 @@
 #print(max(A for A in range(1, 1000) if all(f(x, A) == 1 for x in range(1, 1000))))
 
 
+def d(n, m):
+    return n % m == 0
+def f(x, A):
+    return d(x, A) or ((70 <= x <= 90) <= (not d(x, 22)))
+print(max(A for A in range(1, 1000) if all(f(x, A) == 1 for x in range(1, 2000))))

@@ -177,11 +177,37 @@
 
 
 
-from itertools import product
-count = 0
-l = list(product(sorted('ЛАЙМ'), repeat = 5))
-for i in l:
-    count += 1
-    s = ''.join(i)
-    if s.count('Л') == 0 and s.count('М') == 0 and 'ЙЙ' not in s:
-        print(i, count)
+# from itertools import product
+# count = 0
+# l = list(product(sorted('ЛАЙМ'), repeat = 5))
+# for i in l:
+#     count += 1
+#     s = ''.join(i)
+#     if s.count('Л') == 0 and s.count('М') == 0 and 'ЙЙ' not in s:
+#         print(i, count)
+
+
+
+
+# from itertools import product
+# count = 0
+# p = list(product(sorted('ФОКУС'), repeat = 5))
+# for i in p:
+#     count += 1
+#     s = ''.join(i)
+#     if 'Ф' not in s and s.count('У') == 2:
+#         print(count, s)
+
+
+
+
+# from itertools import product
+# count = 0
+# p = list(product(sorted('ПАРУС'), repeat = 5))
+# for i in p:
+#     s = ''.join(i)
+#     count  += 1
+#     if 'АА' not in s and s.count('У') <= 1:
+#         print(count, s)
+
+

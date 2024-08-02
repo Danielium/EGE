@@ -140,14 +140,44 @@
 # print(count)
 # print(697 - 398)
 
-from itertools import permutations, product
+# from itertools import permutations, product
+# count = 0
+# a = list(permutations('0123456789abcdef', r = 3))
+# f = list(product('02468ace', repeat = 2)) + list(product('13579bdf', repeat = 2))
+# for x in a:
+#     if all(''.join(s) not in ''.join(x) for s in f) and x[0] != '0':
+#         count += 1
+# print(count)
+
+
+
+
+# from itertools import product
+# count = 0
+# l = list(product('0123456789aaaaa', repeat = 5))
+# for x in l:
+#     s = ''.join(x)
+#     if s.count('8') == 1 and s.count('a') >= 2 and s[0] != '0':
+#         count += 1
+# print(count)
+
+
+
+# from itertools import product
+# count = 0
+# l = list(product('0123456789abce', repeat = 5))
+# for x in l:
+#     s = ''.join(x)
+#     if len(set(s)) == 2 and (s[-1] == '0' or s[-1] == '3') and s[0] != '0':
+#         count += 1
+# print(count)
+
+
+
+from itertools import permutations
 count = 0
-a = list(permutations('0123456789abcdef', r = 3))
-f = list(product('02468ace', repeat = 2)) + list(product('13579bdf', repeat = 2))
-for x in a:
-    if all(''.join(s) not in ''.join(x) for s in f) and x[0] != '0':
+for x in permutations(range(8), r = 6):
+    if 3 not in x and x[0] != 0 and\
+        any(x[i]%2 == 0 and x[i+1]%2 == 0 for i in range(5)):
         count += 1
 print(count)
-
-
-
