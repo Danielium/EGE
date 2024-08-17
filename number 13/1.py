@@ -114,10 +114,40 @@
 
 
 
-from ipaddress import *
-count = 0
-net = ip_network('115.192.0.0/255.192.0.0', 0)
-for ip in net:
-    if f'{ip:b}'.count('1') % 3 != 0:
-        count += 1
-print(count)
+# from ipaddress import *
+# count = 0
+# net = ip_network('115.192.0.0/255.192.0.0', 0)
+# for ip in net:
+#     if f'{ip:b}'.count('1') % 3 != 0:
+#         count += 1
+# print(count)
+
+
+
+#17710
+
+# from ipaddress import *
+# count = 0
+# net = ip_network('214.187.224.0/255.255.224.0', 0)
+# for ip in net:
+#     if f'{ip:b}'.count("1") % 6 != 0 and f'{ip:b}'[-4:] == '1000':
+#         count += 1
+# print(count)
+
+#16260
+# from ipaddress import *
+# for m in range(33):
+#     net1 = ip_network(f'123.20.103.136/{m}', 0)
+#     net2 = ip_network(f'123.20.103.151/{m}', 0)
+#     if str(net1.network_address) != str(net2.network_address):
+#         print(net1.netmask)
+#какая-то фигня, джобс решает без библиотеки вообще
+
+#13885 шастин хрень придумал
+# from ipaddress import *
+# for A in (128, 192, 224, 240, 248, 252, 254, 255):
+#     net = ip_network(f'238.51.1.202/255.255.{A}.0', 0)
+#     if all(f'{ip:b}'[:16].count('1') >= f'{ip:b}'[16:].count('1') for ip in net):
+#         print(A)
+#         break
+

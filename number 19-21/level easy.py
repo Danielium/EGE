@@ -57,4 +57,33 @@
 
 
 
+# def f(s, m):
+#     if s >= 67: return m % 2 == 0
+#     if m == 0: return 0
+#     h = [f(s+1, m-1), f(s+3, m-1), f(s*2, m-1)]
+#     return any(h) if m % 2 != 0 else all(h)
+# print([s for s in range(1, 67) if not f(s, 1) and f(s, 2)])
+# print([s for s in range(1, 67) if not f(s, 1) and f(s, 3)])
+# print([s for s in range(1, 67) if not f(s, 2) and f(s, 4)])
 
+
+
+
+# def f(s, m):
+#     if s >= 39: return m % 2 == 0
+#     if m == 0: return 0
+#     h = [f(s+1, m-1), f(s+3, m-1), f(s*2, m-1)]
+#     return any(h) if m % 2 != 0 else all(h)
+# print([s for s in range(1, 39) if not f(s, 1) and f(s, 2)])
+# print([s for s in range(1, 39) if not f(s, 1) and f(s, 3)])
+# print([s for s in range(1, 39) if not f(s, 2) and f(s, 4)])
+
+
+# def f(a, b, m):
+#     if a + b >= 59: return m % 2 == 0
+#     if m == 0: return 0
+#     h = [f(a+1, b, m-1), f(a, b+1, m-1), f(a*2, b, m-1), f(a, b*2, m-1)]
+#     return any(h) if m % 2 != 0 else all(h)
+# print([b for b in range(1, 53) if not f(5, b, 1) and f(5, b, 2)]) # 14
+# print([b for b in range(1, 53) if not f(5, b, 1) and f(5, b, 3)])
+# print([b for b in range(1, 53) if not f(5, b, 2) and f(5, b, 4)])
