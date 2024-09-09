@@ -147,27 +147,54 @@
 # print(count)
 
 
+# count = 0
+# for line in open('t.txt'):
+#     a = sorted([int(x) for x in line.split()])
+#     p = [x for x in a if a.count(x) == 2]
+#     if a[3] < a[0]+a[1]+a[2] and len(p) == 2:
+#         count += 1
+# print(count)
 
 
 
+# count = 0
+# for line in open('t.txt'):
+#     a = sorted([int(x) for x in line.split()])
+#     if (a[0] + a[2])/2 <= a[1]:
+#         count += 1
+# print(count)
 
+# count = 0
+# for line in open('t.txt'):
+#     a = sorted([int(x) for x in line.split()])
+#     if a[0] + a[3] < a[2] + a[1]:
+#         count += 1
+# print(count)
 
+# count = 0
+# for line in open('t.txt'):
+#     a = sorted([int(x) for x in line.split()])
+#     if a[2] ** 2 > a[1] * a[0] * 2:
+#         count += 1
+# print(count)
 
-
-
-
-
-
-
-
-
+# count = 0
+# for line in open('t.txt'):
+#     a = sorted([int(x) for x in line.split()])
+#     p3 = [x for x in a if a.count(x) == 3]
+#     np = [x for x in a if a.count(x) == 1]
+#     if (len(p3) == 3 and len(np) == 3) + ((a[0] + a[5]) ** 2 > a[1] ** 2 + a[2] ** 2 + a[3] ** 2 + a[4] ** 2) >= 1:
+#         count += 1
+# print(count)
 
 
 
 count = 0
 for line in open('t.txt'):
-    a = sorted([int(x) for x in line.split()])
-    p = [x for x in a if a.count(x) == 2]
-    if a[3] < a[0]+a[1]+a[2] and len(p) == 2:
-        count += 1
+    a = [int(x) for x in line.split()]
+    p3 = [x for x in a if a.count(x) == 3]
+    np = [x for x in a if a.count(x) == 1]
+    if len(p3) == 3 and len(np) == 4:
+        if (sum(np) / 4) <= p3[0]: count += 1
+
 print(count)
