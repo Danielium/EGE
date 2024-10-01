@@ -174,10 +174,20 @@
 
 
 
-from itertools import permutations
+# from itertools import permutations
+# count = 0
+# for x in permutations(range(8), r = 6):
+#     if 3 not in x and x[0] != 0 and\
+#         any(x[i]%2 == 0 and x[i+1]%2 == 0 for i in range(5)):
+#         count += 1
+# print(count)
+
+
+from itertools import product
 count = 0
-for x in permutations(range(8), r = 6):
-    if 3 not in x and x[0] != 0 and\
-        any(x[i]%2 == 0 and x[i+1]%2 == 0 for i in range(5)):
+for x in product('01234', repeat = 6):
+    s = ''.join(x)
+    if s[0] not in '01' and s[-1] not in '34':
         count += 1
+        print(s)
 print(count)

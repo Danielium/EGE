@@ -151,3 +151,82 @@
 #         print(A)
 #         break
 
+#10569
+# from ipaddress import *
+# net = ip_network('10.8.248.131/255.255.224.0', 0)
+# print(net.network_address)
+
+#10575
+# from ipaddress import *
+# for m in range(33):
+#     net = ip_network(f'118.193.30.139/{m}', 0)
+#     print(net.network_address, net.netmask)
+
+#10570
+# from ipaddress import *
+# for m in range(33):
+#     net = ip_network(f'154.201.208.17/{m}', 0)
+#     print(net.network_address, net.netmask)
+
+#10571
+# from ipaddress import *
+# for m in range(33):
+#     net = ip_network(f'122.21.49.91/{m}', 0)
+#     print(net)
+
+#10572
+# from ipaddress import *
+# for m in range(33):
+#     net = ip_network(f'173.103.25.118/{m}', 0)
+#     print(net)
+
+#10574
+# from ipaddress import *
+# for m in range(33):
+#     net = ip_network(f'158.116.11.146/{m}', 0)
+#     print(net)
+
+#10573
+# from ipaddress import *
+# for m in range(33):
+#     net = ip_network(f'191.173.145.240/{m}', 0)
+#     print(net, net.num_addresses)
+
+#10576
+# from ipaddress import *
+# net = ip_network('0.0.0.0/255.255.240.0', 0)
+# print(net.num_addresses)
+
+#10577
+# from ipaddress import *
+# for m in range(33):
+#     net1 = ip_network(f'165.112.200.70/{m}', 0)
+#     net2 = ip_network(f'165.112.175.80/{m}', 0)
+#     if net1 == net2:
+#         print(net1)
+
+#10578
+# from ipaddress import *
+# for m in range(33):
+#     net1 = ip_network(f'10.96.180.231/{m}', 0)
+#     net2 = ip_network(f'10.96.140.118/{m}', 0)
+#     if net1 != net2:
+#         print(net1)
+
+#10579
+# from ipaddress import *
+# count = 0
+# net = ip_network('192.168.240.0/255.255.255.0', 0)
+# for ip in net:
+#     if f'{ip:b}'.count('0') == f'{ip:b}'.count('1'):
+#         count += 1
+# print(count)
+
+#10580
+from ipaddress import *
+count = 0
+net = ip_network('10.48.96.0/255.255.240.0', 0)
+for ip in net:
+    if f'{ip:b}'.count('1') > f'{ip:b}'.count('0'):
+        count += 1
+print(count)
