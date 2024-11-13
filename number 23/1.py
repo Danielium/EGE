@@ -55,8 +55,70 @@
 # print(f(2, 7) * f(7, 16) * f(16, 39))
 
 
-def f(x, end):
-    if x < end: return 0
-    if x == end: return 1
-    return f(x - 2, end) + f(x // 2, end)
-print(f(38, 10) * f(10, 2))
+# def f(x, end):
+#     if x < end: return 0
+#     if x == end: return 1
+#     return f(x - 2, end) + f(x // 2, end)
+# print(f(38, 10) * f(10, 2))
+
+# def f(x, end):
+#     if x > end: return 0
+#     if x==end: return 1
+#     return f(x+1, end) + f(x+3, end) + f(x*2, end)
+# print(f(1, 15))
+
+# def f(x, end):
+#     if x > end: return 0
+#     if x==end: return 1
+#     return f(x+1, end) + f(x*2, end) + f(x**2, end)
+# print(f(5, 154))
+
+
+# def f(x, end):
+#     if x > end: return 0
+#     if x == end: return 1
+#     return f(x+1, end) + f(x+2, end) + f(x*4, end)
+# print(f(1, 13))
+
+# def f(x, end):
+#     if x < end: return 0
+#     if x==end: return 1
+#     return f(x-2, end) + f(x-5, end)
+# print(f(23, 2))
+
+
+# def f(x, end):
+#     if x < end: return 0
+#     if x==end: return 1
+#     return f(x-1, end) + f(x-3, end) + f(x//3, end)
+# print(f(22, 2))
+
+
+# def f(x, end):
+#     if x > end: return 0
+#     if x==end: return 1
+#     return f(x+1, end) + f(x*2, end)
+# print(f(1, 10) * f(10, 20))
+
+
+
+def f(x, end, c):
+    if x%2==0: c+=1
+    if x>end:return 0
+    if x==end:return c==6
+    return f(x+1, end, c) + f(x+3, end, c) + f(x+5, end, c)
+print(f(3, 25, 0))
+
+
+
+
+
+
+
+
+
+
+
+
+
+

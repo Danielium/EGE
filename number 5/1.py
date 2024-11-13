@@ -79,11 +79,57 @@
 
 
 
-for n in range(28, 200):
-    b = bin(n)[2:]
-    if b.count('1') % 2 == 0:
-        b = '10' + b[2:] + '0'
-    else:
-        b = '11' + b[2:] + '1'
-    r = int(b, 2)
-    print(n, r)
+# for n in range(28, 200):
+#     b = bin(n)[2:]
+#     if b.count('1') % 2 == 0:
+#         b = '10' + b[2:] + '0'
+#     else:
+#         b = '11' + b[2:] + '1'
+#     r = int(b, 2)
+#     print(n, r)
+
+
+# for x in range(1, 100):
+#     b = bin(x)[2:]
+#     if b.count('1')%2 == 0:
+#         b = b + '0'
+#     else: b = b + '1'
+#     if b.count('1')%2 == 0:
+#         b = b + '0'
+#     else: b = b + '1'
+#     r = int(b, 2)
+#     print(x, r)
+
+
+# for x in range(1, 100):
+#     b = bin(x)[2:]
+#     if b.count('1') % 2 == 0:
+#         b = b + '01'
+#     else: b = b+'10'
+#     r = int(b, 2)
+#     print(r)
+
+
+# for x in range(1, 100):
+#     b = bin(x)[2:]
+#     b = b + b[-1]
+#     if b.count('1') % 2 == 0:
+#         b = b + '0'
+#     else:
+#         b = b + '1'
+#     if b.count('1') % 2 == 0:
+#         b = b + '0'
+#     else:
+#         b = b + '1'
+#     r = int(b, 2)
+#     print(x, r)
+
+
+# for x in range(1000, 10000):
+#     s = str(x)
+#     a = int(s[0]) * int(s[1])
+#     b = int(s[2]) * int(s[3])
+#     k = [a, b]
+#     n = sorted(k)
+#     if n[0] == 12 and n[1] == 14:
+#         print(n, x)

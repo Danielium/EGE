@@ -87,3 +87,47 @@
 # print([b for b in range(1, 53) if not f(5, b, 1) and f(5, b, 2)]) # 14
 # print([b for b in range(1, 53) if not f(5, b, 1) and f(5, b, 3)])
 # print([b for b in range(1, 53) if not f(5, b, 2) and f(5, b, 4)])
+
+
+
+# def f(a, m):
+#     if a > 33: return m%2 == 0
+#     if m==0: return 0
+#     h = [f(a+1, m-1), f(a+2, m-1), f(a+3, m-1), f(a*2, m-1)]
+#     return any(h) if m%2!=0 else all(h)
+# print([a for a in range(1, 33) if f(a, 2)])
+# print([a for a in range(1, 33) if not f(a, 1) and f(a, 3)])
+# print([a for a in range(1, 33) if not f(a, 2) and f(a, 4)])
+
+
+# def f(a, m):
+#     if 36 <= a <= 60: return m%2==0
+#     if a > 60: return m%2!=0
+#     if m==0: return 0
+#     h = [f(a+1, m-1), f(a*2, m-1), f(a*3, m-1)]
+#     return any(h) if m%2!=0 else all(h)
+# print([a for a in range(1, 36) if f(a, 2)])
+# print([a for a in range(1, 36) if not f(a, 1) and f(a, 3)])
+# print([a for a in range(1, 36) if not f(a, 2) and f(a, 4)])
+
+
+
+# def f(a, b, m):
+#     if a + b >= 59: return m%2==0
+#     if m == 0: return 0
+#     h = [f(a+1, b, m-1), f(a, b+1, m-1), f(a*2, b, m-1), f(a, b*2, m-1)]
+#     return any(h) if m%2!=0 else all(h)
+# print([b for b in range(1, 53) if f(5, b, 1)])
+# print([b for b in range(1, 53) if not f(5, b, 1) and f(5, b, 3)])
+# print([b for b in range(1, 53) if not f(5, b, 2) and f(5, b, 4)])
+
+
+
+def f(a, b, m):
+    if a + b >= 77: return m%2==0
+    if m == 0: return 0
+    h = [f(a+1, b, m-1), f(a, b+1, m-1), f(a*2, b, m-1), f(a, b*2, m-1)]
+    return any(h) if m%2!=0 else all(h)
+print([b for b in range(1, 70) if f(7, b, 2)])
+print([b for b in range(1, 70) if not f(7, b, 1) and f(7, b, 3)])
+print([b for b in range(1, 70) if not f(7, b, 2) and f(7, b, 4)])

@@ -164,14 +164,147 @@
 
 
 
-def f(x):
+# def f(x):
+#     c = set()
+#     for d in range(1, int(x ** 0.5) + 1):
+#         if x % d == 0:
+#             c.add(d)
+#             c.add(x // d)
+#     return c
+# for x in range(700001, 701000):
+#     k = [a for a in f(x) if a % 10 == 7 and a != x and a != 7]
+#     if len(k) > 0:
+#         print(x, min(k))
+
+# def div(x):
+#     c = set()
+#     for i in range(2, int(x**0.5)+1):
+#         if x%i==0:
+#             c.add(i)
+#             c.add(x//i)
+#     return sorted(c)
+# for x in range(550001, 550100):
+#     d = [i for i in div(x) if i%10==7]
+#     if len(d) == 3:
+#         print(x, d[2])
+
+
+
+# def prime(x):
+#     return x > 1 and all(x%i!=0 for i in range(2, int(x**0.5)+1))
+# for x in range(6080068, 6080177):
+#     if prime(x): print(x)
+
+
+
+# def div(x):
+#     c = set()
+#     for i in range(2, int(x**0.5)+1):
+#         if x%i==0:
+#             c.add(i)
+#             c.add(x//i)
+#     return sorted(c)
+# for x in range(300000, 300200):
+#     d = [i for i in div(x) if i%3==0]
+#     if len(d) == 5:
+#         print(x, d[4])
+
+# def div(x):
+#     c = set()
+#     for i in range(1, int(x**0.5)+1):
+#         if x%i==0:
+#             c.add(i)
+#             c.add(x//i)
+#     return sorted(c)
+# for x in range(700_000, 700_200):
+#     d = [i for i in div(x) if i%10==7 and i!=7]
+#     if len(d)>0:
+#         print(x, d[0])
+
+
+# def div(x):
+#     c = set()
+#     for i in range(2, int(x**0.5)+1):
+#         if x%i==0:
+#             c.add(i)
+#             c.add(x//i)
+#     if len(c) == 0: return 0
+#     else: return min(c)+max(c)
+# for x in range(800_000, 800_200):
+#     d = div(x)
+#     if d%10==4:
+#         print(x, d)
+
+
+# from fnmatch import fnmatch
+# for x in range(0, 10**9, 17):
+#     if fnmatch(str(x), '12345?6?8'):
+#         print(x, x//17)
+
+
+
+# from fnmatch import fnmatch
+# for x in range(0, 10**8, 141):
+#     if fnmatch(str(x), '1234*7'):
+#         print(x, x//141)
+
+
+# from fnmatch import fnmatch
+# for x in range(0, 10**9, 169):
+#     if fnmatch(str(x), '123*567?'):
+#         print(x, x//169)
+
+
+# from fnmatch import fnmatch
+# for x in range(0, 10**6, 51):
+#     if fnmatch(str(x), '12*45*'):
+#         print(x, x//51)
+
+
+# from fnmatch import fnmatch
+# for x in range(0, 10**10, 2023):
+#     if fnmatch(str(x), '1?2139*4'):
+#         print(x, x//2023)
+
+
+
+from fnmatch import fnmatch
+def div(x):
     c = set()
-    for d in range(1, int(x ** 0.5) + 1):
-        if x % d == 0:
-            c.add(d)
-            c.add(x // d)
-    return c
-for x in range(700001, 701000):
-    k = [a for a in f(x) if a % 10 == 7 and a != x and a != 7]
-    if len(k) > 0:
-        print(x, min(k))
+    for i in range(1, int(x**0.5)+1):
+        if x%i==0:
+            c.add(i)
+            c.add(x//i)
+    return sorted(c)
+for x in range(65000, 660000):
+    if fnmatch(str(x), '6*97*5?'):
+        d = [i for i in div(x) if i%2==0]
+        if len(d) >=4:
+            print(x, sum(d))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

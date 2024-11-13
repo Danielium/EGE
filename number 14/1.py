@@ -96,6 +96,72 @@
 #     except:
 #         ...
 
-for x in range(10, 40):
-    if bin(x)[-4:] == '1011':
-        print(x)
+# for x in range(10, 40):
+#     if bin(x)[-4:] == '1011':
+#         print(x)
+
+# n = 3 * 3125**8 + 2*625**7 - 4*625**6 + 3*125**5 - 2*25**4 - 2024
+# c = []
+# while n>0:
+#     c+=[n%25]
+#     n//=25
+# print(c)
+
+
+# n = 6*144**26 + 11*12**75-48
+# c = []
+# while n>0:
+#     c+=[n%12]
+#     n//=12
+# print(c.count(11))
+
+
+# for x in range(30):
+#     n = 36**17 - 6**x + 71
+#     c = []
+#     while n>0:
+#         c+=[n%6]
+#         n//=6
+#     if sum(c) == 61:
+#         print(x)
+
+# n = 5*216**1156 - 4*36**1147 + 6**1153 - 875
+# c=[]
+# while n>0:
+#     c+=[n%6]
+#     n//=6
+# print(c.count(5)-c.count(0))
+
+
+
+# for n in range(2, 20):
+#     try:
+#         if int('132', n) + int('13', 8) == int('124', n+1):
+#             print(n)
+#     except:
+#         ...
+
+
+# for n in range(2, 20):
+#     try:
+#         if int('21', n) * int('13', n) == int('313', n):
+#             print(n)
+#     except: ...
+
+
+# def f(x, cc):
+#     a = []
+#     while x>0:
+#         a += [x%cc]
+#         x//=cc
+#     return a
+# count = 0
+# for x in range(1000):
+#     if len(f(x, 5)) <= 4 and len(f(x, 2)) >= 5 and x%16 == 13:
+#         count += 1
+# print(count)
+
+
+
+# for x in range(15):
+#     print((int(f'123{x}5', 15) + int(f'1{x}233', 15))/14)
