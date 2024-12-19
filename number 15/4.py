@@ -5,7 +5,6 @@
 # def f(A, x):
 #     return (x + A >= 160) or (d(x, 7) <= (not sb(x, -17)))
 # print(min(A for A in range(1, 2000) if all(f(A, x) == 1 for x in range(1, 2000))))
-from binascii import a2b_qp
 # def d(n, m):
 #     return n % m == 0
 # def f(A, x):
