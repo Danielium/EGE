@@ -189,12 +189,12 @@
 
 
 
-count = 0
-for line in open('t.txt'):
-    a = [int(x) for x in line.split()]
-    p3 = [x for x in a if a.count(x) == 3]
-    np = [x for x in a if a.count(x) == 1]
-    if len(p3) == 3 and len(np) == 4:
-        if (sum(np) / 4) <= p3[0]: count += 1
-
-print(count)
+# count = 0
+# for line in open('t.txt'):
+#     a = [int(x) for x in line.split()]
+#     p3 = [x for x in a if a.count(x) == 3]
+#     np = [x for x in a if a.count(x) == 1]
+#     if len(p3) == 3 and len(np) == 4:
+#         if (sum(np) / 4) <= p3[0]: count += 1
+#
+# print(count)
