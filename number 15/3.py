@@ -28,3 +28,26 @@
 #         print(x)
 
 
+for x in [k * 1/4 for k in range(-10000, 10000)]:
+    P = x in [x for x in range(2, 22, 2)]
+    Q = x in [x for x in range(5, 55, 5)]
+    A = 1
+    f = (A <= P) and (Q <= (not A))
+    if f == 1:
+        print(x)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

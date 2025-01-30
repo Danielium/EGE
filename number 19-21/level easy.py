@@ -123,11 +123,41 @@
 
 
 
-def f(a, b, m):
-    if a + b >= 77: return m%2==0
+# def f(a, b, m):
+#     if a + b >= 77: return m%2==0
+#     if m == 0: return 0
+#     h = [f(a+1, b, m-1), f(a, b+1, m-1), f(a*2, b, m-1), f(a, b*2, m-1)]
+#     return any(h) if m%2!=0 else all(h)
+# print([b for b in range(1, 70) if f(7, b, 2)])
+# print([b for b in range(1, 70) if not f(7, b, 1) and f(7, b, 3)])
+# print([b for b in range(1, 70) if not f(7, b, 2) and f(7, b, 4)])
+
+# def f(a, b, m):
+#     if a+b >= 68: return m%2==0
+#     if m == 0: return 0
+#     h = [f(a+1, b, m-1), f(a, b+1, m-1), f(a+b, b, m-1), f(a, a+b, m-1)]
+#     return any(h) if m%2!=0 else all(h)
+# print('19', [b for b in range(1, 60) if f(8, b, 2)])
+# print('20', [b for b in range(1, 60) if not f(8, b, 1) and f(8, b, 3)])
+# print('21', [b for b in range(1, 60) if not f(8, b, 2) and f(8, b, 4)])
+
+
+
+# def f(a, b, m):
+#     if a*b >= 63: return m%2==0
+#     if m == 0: return 0
+#     h = [f(a+1, b, m-1), f(a, b+1, m-1), f(a*2, b, m-1), f(a, b*2, m-1)]
+#     return any(h) if m%2!=0 else all(h)
+# print('19', [b for b in range(1, 32) if f(2, b, 2)])
+# print('20', [b for b in range(1, 32) if not f(2, b, 1) and f(2, b, 3)])
+# print('21', [b for b in range(1, 32) if not f(2, b, 2) and f(2, b, 4)])
+
+
+def f(a, b, c, m):
+    if (a+b+c) >= 73: return m%2==0
     if m == 0: return 0
-    h = [f(a+1, b, m-1), f(a, b+1, m-1), f(a*2, b, m-1), f(a, b*2, m-1)]
+    h = [f(a+3, b, c, m-1), f(a, b+3, c, m-1), f(a, b, c+3, m-1), f(a+13, b, c, m-1), f(a, b+13, c, m-1), f(a, b, c+13, m-1), f(a+23, b, c, m-1), f(a, b+23, c, m-1), f(a, b, c+23, m-1)]
     return any(h) if m%2!=0 else all(h)
-print([b for b in range(1, 70) if f(7, b, 2)])
-print([b for b in range(1, 70) if not f(7, b, 1) and f(7, b, 3)])
-print([b for b in range(1, 70) if not f(7, b, 2) and f(7, b, 4)])
+print([s for s in range(1, 24) if f(2, s, 2*s, 2)])
+print([s for s in range(1, 24) if not f(2, s, 2*s, 1) and f(2, s, 2*s, 3)])
+print([s for s in range(1, 24) if not f(2, s, 2*s, 2) and f(2, s, 2*s, 4)])

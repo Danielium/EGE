@@ -189,12 +189,81 @@
 
 
 
-count = 0
-for line in open('t.txt'):
-    a = [int(x) for x in line.split()]
-    p3 = [x for x in a if a.count(x) == 3]
-    np = [x for x in a if a.count(x) == 1]
-    if len(p3) == 3 and len(np) == 4:
-        if (sum(np) / 4) <= p3[0]: count += 1
+# count = 0
+# for line in open('t.txt'):
+#     a = [int(x) for x in line.split()]
+#     p3 = [x for x in a if a.count(x) == 3]
+#     np = [x for x in a if a.count(x) == 1]
+#     if len(p3) == 3 and len(np) == 4:
+#         if (sum(np) / 4) <= p3[0]: count += 1
+#
+# print(count)
 
-print(count)
+# count = 0
+# for line in open('t.txt'):
+#     c = [int(x) for x in line.split()]
+#     p = [x for x in c if c.count(x)==2]
+#     if len(p) == 2:
+#         if max(c) < sum(c) - max(c):
+#             count += 1
+# print(count)
+
+
+
+# count = 0
+# for line in open('t.txt'):
+#     c = [int(x) for x in line.split()]
+#     p = [x for x in c if c.count(x)==3]
+#     np = [x for x in c if c.count(x)==1]
+#     if len(p) == 3:
+#         if len(np) == 3:
+#             if sum(np)/3 <= sum(p):
+#                 count += 1
+# print(count)
+
+
+
+# count = 0
+# for line in open('t.txt'):
+#     c = [int(x) for x in line.split()]
+#     p = [x for x in c if c.count(x) == 3]
+#     np = [x for x in c if c.count(x) == 1]
+#     if len(p) == 3:
+#         if len(np) == 3:
+#             if sum(p)**2 > sum(np)**2:
+#                 count += 1
+# print(count)
+
+
+
+# count = 0
+# for line in open('t.txt'):
+#     c = [int(x) for x in line.split()]
+#     p = [x for x in c if c.count(x)==2]
+#     if len(p) == 2:
+#         if max(c) < sum(c) - max(c):
+#             count += 1
+# print(count)
+
+
+# count = 0
+# for line in open('t.txt'):
+#     c = [int(x) for x in line.split()]
+#     p = [x for x in c if c.count(x) == 3]
+#     np = [x for x in c if c.count(x) == 1]
+#     if len(p) == 3 and len(np) == 3:
+#         if sum(p)**2 > sum(np)**2:
+#             count += 1
+# print(count)
+
+
+
+
+
+
+
+
+
+
+
+

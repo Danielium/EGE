@@ -121,10 +121,66 @@
 # print(len(p), max(p))
 
 
-a = [int(x) for x in open('1')]
-m = min(x for x in a if x>0 and x%41 == 0)
-p = []
-for i in range(len(a) - 1):
-    if (a[i] != a[i+1]) and (abs(a[i] - a[i+1]) % m == 0):
-        p.append(a[i] + a[i+1])
-print(len(p), max(p))
+# a = [int(x) for x in open('1')]
+# m = min(x for x in a if x>0 and x%41 == 0)
+# p = []
+# for i in range(len(a) - 1):
+#     if (a[i] != a[i+1]) and (abs(a[i] - a[i+1]) % m == 0):
+#         p.append(a[i] + a[i+1])
+# print(len(p), max(p))
+
+
+
+# a = [int(x) for x in open('1')]
+# c=[]
+# for i in range(len(a)-1):
+#     if abs(a[i]+a[i+1]) % 3 == 0 and abs(a[i]+a[i+1]) %6!=0 and abs(a[i] * a[i+1])%10==8:
+#         c.append(a[i]+a[i+1])
+# print(len(c), max(c))
+
+
+# a = [int(x) for x in open('1')]
+# c = []
+# for i in range(len(a)-3):
+#     if (a[i] > a[i+1] > a[i+2] > a[i+3]) and (a[i] - a[i+3])>1000:
+#         c.append(a[i] + a[i+1] + a[i+2] + a[i+3])
+# print(len(c), min(c))
+
+
+
+# a = [int(x) for x in open('1')]
+# ma = max(a)
+# mi = min(a)
+# c = []
+# for i in range(len(a)-1):
+#     if (a[i] % 3 == ma % 3) + (a[i+1] % 3 == ma % 3) >= 1:
+#         if (a[i] % 7 == mi % 7) + (a[i+1] % 7 == mi % 7) >= 1:
+#             c.append(a[i]+a[i+1])
+# print(len(c), max(c))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

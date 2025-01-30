@@ -223,10 +223,116 @@
 # print(count)
 
 #10580
-from ipaddress import *
-count = 0
-net = ip_network('10.48.96.0/255.255.240.0', 0)
-for ip in net:
-    if f'{ip:b}'.count('1') > f'{ip:b}'.count('0'):
-        count += 1
-print(count)
+# from ipaddress import *
+# count = 0
+# net = ip_network('10.48.96.0/255.255.240.0', 0)
+# for ip in net:
+#     ip_binary = bin(int(ip))[2:].zfill(32)
+#     if ip_binary.count('1') > ip_binary.count('0'):
+#         count += 1
+# print(count)
+
+#	№ 1755
+# from ipaddress import *
+# count=0
+# net = ip_network('112.160.0.0/255.240.0.0', 0)
+# for ip in net:
+#     ip_binary = bin(int(ip))[2:].zfill(32)
+#     if ip_binary.count('1')%5==0:
+#         count+=1
+# print(count)
+
+# from ipaddress import *
+# count=0
+# net = ip_network('172.16.128.0/255.255.192.0', 0)
+# for ip in net:
+#     ip_binary = bin(int(ip))[2:].zfill(32)
+#     if ip_binary.count('1')%2!=0:
+#         count+=1
+# print(count)
+
+# from ipaddress import *
+# count=0
+# net = ip_network('112.160.0.0/255.240.0.0', 0)
+# for ip in net:
+#     ip_bin = bin(int(ip))[2:].zfill(32)
+#     if ip_bin.count('1')%3!=0:
+#         count+=1
+# print(count)
+
+# from ipaddress import *
+# count=0
+# net = ip_network('115.192.0.0/255.192.0.0', 0)
+# for ip in net:
+#     ip_bin = bin(int(ip))[2:].zfill(32)
+#     if ip_bin.count('1')%3!=0:
+#         count+=1
+# print(count)
+
+# from ipaddress import *
+# count = 0
+# net = ip_network('123.222.111.192/255.255.255.248', 0)
+# for ip in net:
+#     ip_bin = bin(int(ip))[2:].zfill(32)  это новый родин метод, чтобы обхоиться без f"{ip:b}", который не везде работает
+#     if ip_bin[25:].count('0')%3!=0: count += 1
+# print(count)
+
+# from ipaddress import *
+# net = ip_network('119.68.84.200/255.255.240.0', 0)
+# print(str(bin(int(net.network_address))[2:].zfill(32)).count('1'), bin(int(net.network_address))[2:].zfill(32))
+
+
+
+print(bin(int('64'))[2:].zfill(8))
+print(int('11000000', 2))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -144,13 +144,47 @@
 
 
 
+# s = 70*'8'
+# while '2222' in s or '8888' in s:
+#     if '2222' in s: s = s.replace('2222', '88')
+#     else: s = s.replace('8888', '22')
+# print(s)
+
+
+
+# s = '2'+'5'*81
+# while '25' in s or '355' in s or '4555' in s:
+#     if '25' in s: s=s.replace('25', '4')
+#     if '355' in s: s=s.replace('355', '2')
+#     if '4555' in s: s=s.replace('4555', '3')
+# print(s)
+
+
+# s = 12*'1'+4*'2'
+# while '11' in s:
+#     if '112' in s: s = s.replace('112', '7')
+#     else: s=s.replace('11', '3')
+# print(s)
 
 
 
 
+# for x in range(2, 51):
+#     s = '6' * x
+#     while '66' in s:
+#         s=s.replace('66', '1')
+#         s=s.replace('11', '2')
+#         s=s.replace('22', '6')
+#     if s == '21':
+#         print(x)
 
 
 
+s = 46*'1'+31*'2'
+while '1111' in s:
+    s=s.replace('1111', '2', 1)
+    s=s.replace('222', '1', 1)
+print(s)
 
 
 

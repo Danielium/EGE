@@ -286,3 +286,46 @@
 
 
 
+# from itertools import product, permutations
+# def f(x, y, w, z):
+#     return (x or (not y)) and (not (y == z)) and w
+# for x1, x2, x3, x4 in product([0, 1], repeat = 4):
+#     p = (
+#         (0, 1, x1, 0, 1),
+#         (x2, 1, 1, 0, 1),
+#         (1, x3, 0, x4, 1)
+#     )
+#     if len(p) == len(set(p)):
+#         for m in permutations('xywz', r = 4):
+#             if all(f(**dict(zip(m, l))) == l[-1] for l in p):
+#                 print(*m)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -73,6 +73,29 @@
 # print(max(A for A in range(1, 500) if all(f(x, y, A) == 1 for x in range(1, 500) for y in range(1, 500))))
 
 
-def f(x, y, A):
-    return ((x + y) <= 30) or (y <= (x + 2)) or (y >= A)
-print(max(A for A in range(100) if all(f(x, y, A) == 1 for x in range(200) for y in range(200))))
+# def f(x, y, A):
+#     return ((x + y) <= 30) or (y <= (x + 2)) or (y >= A)
+# print(max(A for A in range(100) if all(f(x, y, A) == 1 for x in range(200) for y in range(200))))
+
+# def f(a, x, y):
+#     return (x+y<=24) or (y<=x-2) or (y>=a)
+# print(max(a for a in range(100) if all(f(a, x, y) == 1 for x in range(200) for y in range(200))))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

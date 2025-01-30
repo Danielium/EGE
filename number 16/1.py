@@ -106,9 +106,32 @@
 #     f(i)
 # print((f(2023) - f(2022)) / f (2020))
 
+# from sys import *
+# setrecursionlimit(2024)
+# def f(n):
+#     if n == 1: return 1
+#     return (n-1)*f(n-1)
+# print(( f(2024)//7 - f(2023) ) // f(2022) )
+
+
+# from sys import *
+# setrecursionlimit(5000)
+# def f(n):
+#     if n<10: return n-1
+#     if n>=10 and n%2==0: return 3*n-1+f(n-3)
+#     if n>=10 and n%2==1: return 5*n+2+f(n-4)
+# print(f(4445)-f(4444))
+
+
+# def f(n):
+#     if n<=10: return n
+#     if n>10 and n%2==0: return 2*f(n-2)+6
+#     if n>10 and n%2==1: return f(n-1)+2*n
+# print(f(27)-f(20))
+
 from sys import *
-setrecursionlimit(2024)
 def f(n):
-    if n == 1: return 1
+    if n==1: return 1
     return (n-1)*f(n-1)
-print(( f(2024)//7 - f(2023) ) // f(2022) )
+setrecursionlimit(2050)
+print((f(2024) // 7 - f(2023)) // f(2022))

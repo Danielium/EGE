@@ -102,17 +102,57 @@
 
 
 
-def f(x, end, c):
-    if x%2==0: c+=1
-    if x>end:return 0
-    if x==end:return c==6
-    return f(x+1, end, c) + f(x+3, end, c) + f(x+5, end, c)
-print(f(3, 25, 0))
+# def f(x, end, c):
+#     if x%2==0: c+=1
+#     if x>end:return 0
+#     if x==end:return c==6
+#     return f(x+1, end, c) + f(x+3, end, c) + f(x+5, end, c)
+# print(f(3, 25, 0))
 
 
 
+# def f(x, end):
+#     if x > end: return 0
+#     if x == end: return 1
+#     return f(x+1, end)+f(x+3, end)+f(x * 2,  end)
+# print(f(3, 9)*f(9, 12)*f(12, 20))
 
 
+# def f(x, end):
+#     if x>end: return 0
+#     if x==end: return 1
+#     return f(x+1, end) + f(x*2, end)
+# print(f(1, 12)*f(12, 30))
+
+
+
+# def f(x, end):
+#     if x==end: return 1
+#     if x<end: return 0
+#     return f(x-8, end)+f(x//2, end)
+# print(f(102, 43)*f(43, 5))
+
+
+# def f(x, end):
+#     if x == end: return 1
+#     if x>end or x==6: return 0
+#     return f(x+2, end) + f(x*3, end)
+# print(f(1, 25)*f(25, 63))
+
+
+
+# def f(x, end):
+#     if x == end: return 1
+#     if x>end or x==11 or x==18: return 0
+#     return f(x+1, end)+f(x+2, end)+f(x*3, end)
+# print(f(4, 8)*f(8, 23))
+
+
+# def f(x, end):
+#     if x == end: return 1
+#     if x > end: return 0
+#     return f(x+1, end)+f(x*2, end)+f(x*2+1, end)+f(x*10, end)
+# print(f(1, 15))
 
 
 
