@@ -14,8 +14,7 @@
 #         for p in permutations('xywz', r=4):
 #             if all(f(**dict(zip(p, l)))==l[-1] for l in t):
 #                 print(*p)
-
-
+from binascii import a2b_qp
 #5
 # for n in range(45, 300):
 #     d = bin(n)[2:]
@@ -85,18 +84,18 @@
 
 
 #15
-# from itertools import combinations
-# def f(x):
-#     b = 101 <= x <= 143
-#     c = 144 <= x <= 199
-#     a = a1 <= x <= a2
-#     return a<=(b or c)
-# ox = [x*0.25 for x in range(101*4, 199*4)]
-# m=[]
-# for a1, a2 in combinations(ox, 2):
-#     if all(f(x) for x in ox):
-#         m.append(a2-a1)
-# print(max(m))
+from itertools import combinations
+def f(x):
+    b = 101 <= x <= 143
+    c = 144 <= x <= 199
+    a = a1 <= x <= a2
+    return a <= (b or c)
+ox = [x*0.25 for x in range(101*4, 200*4)]
+m = []
+for a1, a2 in combinations(ox, 2):
+    if all(f(x) for x in ox):
+        m.append(a2-a1)
+print(max(m))
 
 #17
 # def sc(x):
