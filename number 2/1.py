@@ -301,6 +301,19 @@
 #                 print(*m)
 
 
+from itertools import product, permutations
+def f(w, x, y, z):
+    return ((not ((not y) <= x) <= w)) or (z<=x)
+for x1, x2, x3, x4, x5, x6 in product([0, 1], repeat = 6):
+    t = (
+        (x1, 0, 0, x2, 0),
+        (x3, 1, 1, 0, 0),
+        (x4, 1, x5, x6, 0)
+    )
+    if len(t) == len(set(t)):
+        for p in permutations('wxyz'):
+            if all(f(**dict(zip(p, l)))==l[-1] for l in t):
+                print(*p)
 
 
 

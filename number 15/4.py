@@ -5,9 +5,7 @@
 # def f(A, x):
 #     return (x + A >= 160) or (d(x, 7) <= (not sb(x, -17)))
 # print(min(A for A in range(1, 2000) if all(f(A, x) == 1 for x in range(1, 2000))))
-
-
-
+from binascii import a2b_qp
 # def d(n, m):
 #     return n % m == 0
 # def f(A, x):
@@ -231,7 +229,50 @@
 
 
 
+# from itertools import combinations
+# def f(x):
+#     m = 32 <= x <= 68
+#     n = 54 <= x <= 76
+#     a = a1 <= x <= a2
+#     return (not(m or n)) == (not a)
+# ox = [x/4 for x in range(32*4, 76*4)]
+# m = []
+# for a1, a2 in combinations(ox, 2):
+#     if all(f(x) for x in ox):
+#         m.append(a2-a1)
+# print(min(m))
 
+
+
+
+# from itertools import combinations
+# def f(x):
+#     b = 24 <= x <= 90
+#     c = 47 <= x <= 115
+#     a = a1 <= x <= a2
+#     return (c) <= (((not a) and (b)) <= (not c))
+# ox = [x/4 for x in range(24*4, 115*4)]
+# m = []
+# for a1, a2 in combinations(ox, 2):
+#     if all(f(x) for x in ox):
+#         m.append(a2-a1)
+# print(min(m))
+
+
+
+
+# from itertools import combinations
+# def f(x):
+#     p = 25 <= x <= 73
+#     q = 75 <= x <= 118
+#     a = a1 <= x <= a2
+#     return ((a) and (not q)) <= ((p) or (q))
+# m = []
+# ox = [x/4 for x in range(25*4, 118*4)]
+# for a1, a2 in combinations(ox, 2):
+#     if all(f(x) for x in ox):
+#         m.append(a2-a1)
+# print(max(m))
 
 
 

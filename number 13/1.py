@@ -283,8 +283,12 @@
 
 
 
-print(bin(int('64'))[2:].zfill(8))
-print(int('11000000', 2))
+# from ipaddress import *
+# for m in range(33):
+#     net1 = ip_network(f'200.154.190.12/{m}', 0)
+#     net2 = ip_network(f'200.154.184.0/{m}', 0)
+#     if net1==net2:
+#         print(m)
 
 
 

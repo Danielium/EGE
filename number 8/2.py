@@ -183,11 +183,24 @@
 # print(count)
 
 
+# from itertools import product
+# count = 0
+# for x in product('01234', repeat = 6):
+#     s = ''.join(x)
+#     if s[0] not in '01' and s[-1] not in '34':
+#         count += 1
+#         print(s)
+# print(count)
+
+
+
+
 from itertools import product
 count = 0
-for x in product('01234', repeat = 6):
+for x in product('0123456789ABCDE', repeat=5):
     s = ''.join(x)
-    if s[0] not in '01' and s[-1] not in '34':
-        count += 1
-        print(s)
+    if s[0] != '0':
+        if s.count('8') == 1:
+            if s.count('A') + s.count('B') + s.count('C') + s.count('D') + s.count('E') >=2:
+                count += 1
 print(count)

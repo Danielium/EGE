@@ -28,13 +28,32 @@
 #         print(x)
 
 
-for x in [k * 1/4 for k in range(-10000, 10000)]:
-    P = x in [x for x in range(2, 22, 2)]
-    Q = x in [x for x in range(5, 55, 5)]
-    A = 1
-    f = (A <= P) and (Q <= (not A))
-    if f == 1:
-        print(x)
+# for x in [k * 1/4 for k in range(-10000, 10000)]:
+#     P = x in [x for x in range(2, 22, 2)]
+#     Q = x in [x for x in range(5, 55, 5)]
+#     A = 1
+#     f = (A <= P) and (Q <= (not A))
+#     if f == 1:
+#         print(x)
+
+# def d(m, n):
+#     return m%n==0
+# def f(x, a):
+#     b = x in [x for x in range(60, 81)]
+#     return d(x, a) or (b <= (not d(x, 22)))
+# print(max(a for a in range(1, 1000) if all(f(x, a) for x in range(1, 1000))))
+
+
+# def d(n, m):
+#     return n%m==0
+# def f(a, x):
+#     return (d(405, x) <= d(81, x)) or (a - x > 162)
+# print(min(a for a in range(1, 1000) if all(f(a, x) for x in range(1, 1000))))
+
+
+# def f(x, y, a):
+#     return (9*x + y > a) or (x>=36) or (y >= 18)
+# print(max(a for a in range(1, 500) if all(f(x, y, a) for x in range(1, 500) for y in range(1, 500))))
 
 
 

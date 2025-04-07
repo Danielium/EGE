@@ -256,9 +256,16 @@
 #             count += 1
 # print(count)
 
-
-
-
+count = 0
+for line in open('t.txt'):
+    c = [int(x) for x in line.split()]
+    np = [x for x in c if c.count(x)==1]
+    tr = [x for x in c if c.count(x)==3]
+    if len(tr)==3:
+        if len(np) == 3:
+            if (sum(np))**2 < (sum(tr))**2:
+                count += 1
+print(count)
 
 
 

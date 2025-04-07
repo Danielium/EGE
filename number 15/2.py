@@ -81,6 +81,23 @@
 #     return (x+y<=24) or (y<=x-2) or (y>=a)
 # print(max(a for a in range(100) if all(f(a, x, y) == 1 for x in range(200) for y in range(200))))
 
+#
+# def d(n, m):
+#     return n % m == 0
+#
+# def f(x, a):
+#     return (d(x,3) <= (not d(x, 5))) or (x + a >= 70)
+#
+# print(min(A for A in range(1, 1000) if all(f(x, A) == 1 for x in range(1, 1000))))
+
+
+
+
+# def f(x, y, A):
+#     return (x - 3*y < A) or (y > 400) or (x > 56)
+# print(min(A for A in range(1, 500) if all(f(x, y, A) for x in range(1, 500) for y in range(1, 500))))
+
+
 
 
 

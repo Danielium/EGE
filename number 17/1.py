@@ -158,8 +158,13 @@
 #             c.append(a[i]+a[i+1])
 # print(len(c), max(c))
 
-
-
+a = [int(x) for x in open('1')]
+c=[]
+m = max(m for m in a if m%19==0)
+for i in range(len(a)-1):
+    if ((a[i] > m) + (a[i+1] > m)) > 0:
+        c.append(a[i] + a[i+1])
+print(len(c), min(c))
 
 
 

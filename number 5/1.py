@@ -133,3 +133,32 @@
 #     n = sorted(k)
 #     if n[0] == 12 and n[1] == 14:
 #         print(n, x)
+
+
+# def tr(x):
+#     n = ''
+#     while x:
+#         n = str(x%3)+n
+#         x//=3
+#     return n
+
+
+
+
+def tr(x):
+    n = ''
+    while x:
+        n = str(x%3)+n
+        x//=3
+    return n
+
+for n in range(1, 100):
+    t = tr(n)
+    if (2*t.count('2')+t.count('1'))%2==0:
+        t = '12'+t[2:]+'0'
+    else: t = '10'+t[2:]+'2'
+    r = int(t, 3)
+    print(n, r)
+
+
+

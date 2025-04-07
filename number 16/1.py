@@ -129,9 +129,20 @@
 #     if n>10 and n%2==1: return f(n-1)+2*n
 # print(f(27)-f(20))
 
-from sys import *
+# from sys import *
+# def f(n):
+#     if n==1: return 1
+#     return (n-1)*f(n-1)
+# setrecursionlimit(2050)
+# print((f(2024) // 7 - f(2023)) // f(2022))
+
+from functools import lru_cache
+
+@lru_cache(None)
 def f(n):
-    if n==1: return 1
-    return (n-1)*f(n-1)
-setrecursionlimit(2050)
-print((f(2024) // 7 - f(2023)) // f(2022))
+    if n < 7: return 7
+    if n >=7 and n%3!=0: return 5-f(n-1)
+    if n >=7 and n%3==0: return 3+f(n-1)
+for x in range(1, 3016):
+    f(x)
+print(f(3015))
