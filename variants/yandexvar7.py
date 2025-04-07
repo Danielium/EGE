@@ -98,23 +98,75 @@
 #         m.append(a2-a1)
 # print(max(m))
 
-#дальше не из варика яндекса, тк варик яндекса бред
+#17
+# def sc(x):
+#     return sum(map(int, str(abs(x))))
+# n = [int(x) for x in open('t.txt', encoding='utf-8-sig')]
+# m = max(k for k in n if len(str(abs(k))) == 3)
+# sp = []
+# for i in range(len(n) - 1):
+#     if (sc(abs(n[i])) % 5 == 0) != (sc(abs(n[i+1])) % 5 == 0):
+#         if abs(n[i]**2 - n[i+1]**2) >= m**3:
+#             sp.append(n[i] + n[i+1])
+# print(len(sp), max(sp))
 
-#16
-# from functools import lru_cache
-# @lru_cache(None)
-# def f(n):
-#     if n<10:return n
-#     return 3*n+g(n-2)
-#
-# @lru_cache(None)
-# def g(n):
-#     if n<10: return n
-#     if n>9: return n - 2 + f(n-1)
-#
-# for x in range(1, 2204):
-#     f(x)
-#     g(x)
-# print(f(2204)-g(2200))
+#19-21
+# def f(a, b, m):
+#     if a+b >= 189: return m%2==0
+#     if m == 0: return 0
+#     if a>=b:
+#         h = [f(a+b, b, m-1), f(a, a+b, m-1), f(a, a, m-1)]
+#     if a<b:
+#         h = [f(a+b, b, m-1), f(a, a+b, m-1), f(b, b, m-1)]
+#     return any(h) if m%2!=0 else all(h)
+# print([s for s in range(1, 184) if f(5, s, 2)]) # 60
+# print([s for s in range(1, 184) if not f(5, s, 1) and f(5, s, 3)])
+# print([s for s in range(1, 184) if not f(5, s, 2) and f(5, s, 4)])
 
+#23
+# def pc2(x):
+#     return int(str(x**2)[0])
+# def sc(x):
+#     return sum(map(int, str(x)))
+# def f(x, end):
+#     if x==end: return 1
+#     if x < end: return 0
+#     return f(x-pc2(x), end)+f(x-sc(x), end)
+# print(f(32, 1))
 
+#25
+# from fnmatch import fnmatch
+# for x in range(0, 10**10, 42):
+#     if fnmatch(str(x), '48*15*0'):
+#         print(x, x//42)
+
+#27
+clustersA = [[], []]
+clustersB = [[], [], []]
+for line in open('27_А.txt'):
+    x, y = [float(k) for k in line.split()]
+    if x > 0: clustersA[0].append([x, y])
+    else: clustersA[1].append([x, y])
+for line in open('27_Б.txt'):
+    x, y = [float(k) for k in line.split()]
+    if y<x: clustersB[0].append([x, y])
+    if y<-x-0.1: clustersB[1].append([x, y])
+    else: clustersB[2].append([x, y])
+def d(A, B):
+    x1, y1 = A
+    x2, y2 = B
+    return ((x2-x1)**2 + (y2-y1)**2)**0.5
+def center(cl):
+    m = []
+    for p in cl:
+        sm = sum(d(p, p1) for p1 in cl)
+        m.append([sm, p])
+    return min(m)[1]
+centersA = [center(cl) for cl in clustersA]
+centersB = [center(cl) for cl in clustersB]
+pxA = sum(x for x, y in centersA)/2 * 10000
+pyA = sum(y for x, y in centersA)/2 * 10000
+pxB = sum(x for x, y in centersB)/3 * 10000
+pyB = sum(y for x, y in centersB)/3 * 10000
+print(int(abs(pxA)), int(abs(pyA)))
+print(int(abs(pxB)), int(abs(pyB)))
