@@ -259,54 +259,213 @@
 #B 250615 150222
 
 
+#5
 
-
-data = []
-
-for line in open('27B5.txt'):
-    line = line.replace(',', '.')
-    a = [float(x) for x in line.split()]
-    data.append(a)
-
-print(len(data))
-
-def d(A, B):
-    x1, y1 = A
-    x2, y2 = B
-    return ((x2-x1)**2 + (y2-y1)**2) ** 0.5
-
-def get_cluster(p0):
-    cluster = [p for p in data if d(p0, p) < 1]
-    if len(cluster) > 0:
-        for p in cluster: data.remove(p)
-        next_cluster = [get_cluster(p) for p in cluster]
-        cluster += sum(next_cluster, [])
-    return cluster
-
-clustres = []
-
-while len(data) != 0:
-    cluster = get_cluster(data[0])
-    print(len(cluster))
-    clustres.append(cluster)
-
-def center(cl):
-    m = []
-    for p in cl:
-        sm = sum(d(p, p1) for p1 in cl)
-        m.append([sm, p])
-    return min(m)[1]
-
-
-centres = [center(cl) for cl in clustres]
-
-px = (sum(x for x, y in centres) / len(centres)) * 100000
-py = (sum(y for x, y in centres) / len(centres)) * 100000
-
-print(int(px), int(py))
+# data = []
+#
+# for line in open('27B5.txt'):
+#     line = line.replace(',', '.')
+#     a = [float(x) for x in line.split()]
+#     data.append(a)
+#
+# print(len(data))
+#
+# def d(A, B):
+#     x1, y1 = A
+#     x2, y2 = B
+#     return ((x2-x1)**2 + (y2-y1)**2) ** 0.5
+#
+# def get_cluster(p0):
+#     cluster = [p for p in data if d(p0, p) < 1]
+#     if len(cluster) > 0:
+#         for p in cluster: data.remove(p)
+#         next_cluster = [get_cluster(p) for p in cluster]
+#         cluster += sum(next_cluster, [])
+#     return cluster
+#
+# clustres = []
+#
+# while len(data) != 0:
+#     cluster = get_cluster(data[0])
+#     print(len(cluster))
+#     clustres.append(cluster)
+#
+# def center(cl):
+#     m = []
+#     for p in cl:
+#         sm = sum(d(p, p1) for p1 in cl)
+#         m.append([sm, p])
+#     return min(m)[1]
+#
+#
+# centres = [center(cl) for cl in clustres]
+#
+# px = (sum(x for x, y in centres) / len(centres)) * 100000
+# py = (sum(y for x, y in centres) / len(centres)) * 100000
+#
+# print(int(px), int(py))
 
 #A 752263 548854
 #B 767186 281688
+
+
+
+
+
+#6
+
+# from math import dist
+# data = []
+#
+# for line in open('27B6.txt'):
+#     line = line.replace(',', '.')
+#     data.append([float(x) for x in line.split()])
+#
+# print(len(data))
+#
+#
+# def get_cluster(p0):
+#     cluster = [p for p in data if dist(p0, p) < 1]
+#     if len(cluster) > 0:
+#         for p in cluster: data.remove(p)
+#         next_cluster = [get_cluster(p) for p in cluster]
+#         cluster += sum(next_cluster, [])
+#     return cluster
+#
+# clustres = []
+#
+# while len(data) != 0:
+#     cluster = get_cluster(data[0])
+#     print(len(cluster))
+#     clustres.append(cluster)
+#
+# def m(cl):
+#     mx = sorted([x for x, y in cl])
+#     medx = mx[len(mx)//2]
+#     my = sorted([y for x, y in cl])
+#     medy = my[len(my) // 2]
+#     return [medx, medy]
+#
+# from random import random
+# from turtle import *
+# tracer(0)
+# color = random(), random(), random()
+# up()
+# screensize(10000, 10000)
+# for cluster in clustres:
+#     color = random(), random(), random()
+#     for p in cluster:
+#         x1, y1 = p
+#         goto(x1*40, y1*40)
+#         dot(3, color)
+# done()
+#
+#
+# medians = [m(cl) for cl in clustres]
+# px = int(sum(x for x, y in medians)/len(medians) * 10000)
+# py = int(sum(y for x, y in medians)/len(medians) * 10000)
+# print(px, py)
+
+# 40893 9686
+# 30438 41916
+
+
+# from math import dist
+#
+# data = []
+#
+# for line in open('27B7.txt'):
+#     data.append([float(x) for x in line.split()])
+# print(len(data))
+#
+# def get_cluster(p0):
+#     cluster = [p for p in data if dist(p0, p) < 0.4]
+#     if len(cluster) > 0:
+#         for p in cluster: data.remove(p)
+#         next_cluster = [get_cluster(p) for p in cluster]
+#         cluster += sum(next_cluster, [])
+#     return cluster
+#
+# clusters = []
+#
+# while data:
+#     cluster = get_cluster(data[0])
+#     print(len(cluster))
+#     clusters.append(cluster)
+#
+# def d(cl):
+#     dmtr = []
+#     for i in range(len(cl)-1):
+#         for j in range(i+1, len(cl)):
+#             dmtr.append(dist(cl[i], cl[j]))
+#     return max(dmtr)
+#
+# dmtrs = [d(cl) for cl in clusters]
+#
+# dmin = int(min(dmtrs) * 100000)
+# davg = int(sum(dmtrs) / len(dmtrs) * 100000)
+# print(dmin, davg)
+
+
+
+# from math import dist
+#
+# data = []
+#
+# for line in open('27A8.txt'):
+#     data.append([float(x) for x in line.split()])
+# print(len(data))
+#
+# def get_cluster(p0):
+#     cluster = [p for p in data if dist(p0, p) < 0.5]
+#     if len(cluster) > 0:
+#         for p in cluster: data.remove(p)
+#         next_cluster = [get_cluster(p) for p in cluster]
+#         cluster += sum(next_cluster, [])
+#     return cluster
+#
+# clusters = []
+#
+# while data:
+#     cluster = get_cluster(data[0])
+#     print(len(cluster))
+#     clusters.append(cluster)
+#
+# clusters = sorted(clusters, key=len)
+# clusters.remove(clusters[0])
+#
+# def k(cl):
+#     m = []
+#     for p in cl:
+#         s = sum(dist(p, p1) for p1 in cl)
+#         m.append([s, p])
+#     return max(m)[1]
+#
+# from turtle import *
+# from random import random
+# up()
+# tracer(0)
+# screensize(10000, 10000)
+# for cluster in clusters:
+#     color = random(), random(), random()
+#     for p in cluster:
+#         x, y = p
+#         goto(x*50, y*50)
+#         dot(3, color)
+# done()
+#
+# edges = [k(cl) for cl in clusters]
+#
+# tx = int(sum(x for x, y in edges) / len(edges) * 10000)
+# ty = int(sum(y for x, y in edges) / len(edges) * 10000)
+#
+# print(tx, ty)
+
+# 11575 4282
+# -4228 16951
+
+
+
 
 
 
